@@ -49,8 +49,6 @@ header {
             color: #E2E2E2;
             font-family: "Inter", sans-serif;
         }
-
-
     }
 
     .primaryCTA {
@@ -78,21 +76,16 @@ header {
             height: 10px;
             margin-left: 3px;
         }
-
-
     }
 
     .primaryCTA:hover {
-        opacity: 0.9;
+        opacity: 0.8;
     }
-
 }
 
 main {
 
-
     /*Hero Section*/
-
     .hero {
         display: flex;
         justify-content: center;
@@ -100,7 +93,6 @@ main {
         width: 100%;
         height: auto;
         position: relative;
-
 
         .image-hero {
             width: 100%;
@@ -111,8 +103,7 @@ main {
         .title {
             z-index: 2;
             position: absolute;
-            top: 140px;
-
+            top: 110px;
         }
 
         h1 {
@@ -123,7 +114,6 @@ main {
             letter-spacing: -2.4px;
             text-transform: uppercase;
             text-align: center;
-
         }
 
         p {
@@ -135,14 +125,12 @@ main {
             font-weight: 400;
             line-height: 28px;
             margin-top: 9px;
-            
-            
         }
 
         .buttons {
             position: absolute;
             z-index: 3;
-            top: 415px;
+            top: 385px;
             display: flex;
             gap: 16px;
         }
@@ -164,7 +152,6 @@ main {
             background-color: #E9C349;
             border: none;
             cursor: pointer;
-
         }
 
         .buttontwo {
@@ -183,16 +170,45 @@ main {
             background-color: transparent;
             border: 1px solid #E9C349;
             cursor: pointer;
-            
         }
 
-    .buttonone:hover {
-        opacity: 0.7;
-    }
+        .buttonthree {
+            position: absolute;
+            z-index: 5;
+            width: 343px;
+            height: 34px;
+            padding: 8px 16px;
+            color: #E2E2E2;
+            text-align: center;
+            font-family: Inter;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: #E9C349;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(26, 28, 28, 0.50);
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+            top: 465px;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .buttontwo:hover {
-        opacity: 0.5;
-    }
+        .buttonone:hover {
+            opacity: 0.7;
+        }
+
+        .buttontwo:hover {
+            opacity: 0.5;
+        }
+
+        .buttonthree:hover {
+            opacity: 0.5;
+        }
 
     }
 
@@ -207,5 +223,118 @@ main {
         z-index: 1;
     }
 
+    .services {
+        background-color: #000000;
+        padding: 120px 64px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-height: 720px;
+        flex-direction: column;
+        gap: 64px;
 
+        .box-title {
+            width: 1152px;
+            height: 72px;
+            margin-top: 120px;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 14px;
+
+            .title-services {
+                color: #E2E2E2;
+                text-align: center;
+                font-family: "Bebas Neue";
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 52px;
+                /* 108.333% */
+                letter-spacing: 0.96px;
+                text-transform: uppercase;
+            }
+
+            .trace {
+                width: 64px;
+                height: 4px;
+                background-color: #E9C349;
+                margin-bottom: 0;
+            }
+        }
+
+
+        .box-master {
+            display: flex;
+            gap: 24px;
+            color: #E2E2E2
+        }
+
+        .first-box {
+            width: 368px;
+            height: 290px;
+            display: flex;
+            padding: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #1A1C1C;
+
+
+        }
+
+        .second-box {
+            width: 368px;
+            height: 290px;
+            display: flex;
+            padding: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #1A1C1C;
+        }
+
+        .third-box {
+            width: 368px;
+            height: 290px;
+            display: flex;
+            padding: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #1A1C1C;
+
+        }
+
+        .sub-box {
+            color: #E2E2E2;
+            font-family: "Bebas Neue";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            /* 112.5% */
+            letter-spacing: 0.64px;
+            text-transform: uppercase;
+        }
+
+        .text-box {
+            color: #C4C7C7;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 150% */
+        }
+
+    }
 }

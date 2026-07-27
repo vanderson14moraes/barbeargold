@@ -225,18 +225,18 @@ main {
 
     .services {
         background-color: #000000;
-        padding: 120px 64px;
+        padding: 100px 64px;
         display: flex;
         align-items: center;
         width: 100%;
-        max-height: 720px;
+        max-height: auto;
         flex-direction: column;
-        gap: 64px;
+        gap: 40px;
 
         .box-title {
             width: 1152px;
             height: 72px;
-            margin-top: 120px;
+            margin-top: 10px;
             background-color: #000000;
             display: flex;
             justify-content: center;
@@ -269,7 +269,10 @@ main {
         .box-master {
             display: flex;
             gap: 24px;
-            color: #E2E2E2
+            color: #E2E2E2;
+            padding: 22px;
+
+
         }
 
         .first-box {
@@ -324,6 +327,20 @@ main {
             /* 112.5% */
             letter-spacing: 0.64px;
             text-transform: uppercase;
+            padding-top: 16px;
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            background: rgba(233, 195, 73, 0.10);
+            border-radius: 50px;
+
+
+
         }
 
         .text-box {
@@ -336,5 +353,156 @@ main {
             /* 150% */
         }
 
+        .divprice {
+            padding-top: 16px;
+
+
+        }
+
+        .price {
+            color: #E9C349;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            /* 133.333% */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+
+        .spanprice {
+            color: #E2E2E2;
+            font-family: "Bebas Neue";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            /* 112.5% */
+            letter-spacing: 0.64px;
+        }
+
     }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1A1C1C;
+        width: 100%;
+        max-height: 497px;
+        padding: 110px 64px;
+    }
+
+    .box-about-master {
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        align-items: center;
+        width: 1152px;
+        background-color: #1A1C1C;
+
+    }
+
+    .box-about01 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 342px;
+        height: 252px;
+        background-color: #1A1C1C;
+        padding: 24px;
+        gap: 4px;
+
+        .icon-about {
+            margin-bottom: 10px;
+        }
+
+        .sub-about {
+            color: #E2E2E2;
+            text-align: center;
+            font-family: "Bebas Neue";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0.64px;
+            text-transform: uppercase;
+
+        }
+
+        .text-about {
+            color: #C4C7C7;
+            text-align: center;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+
+        }
+
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-height: 960px;
+        background-color: #000000;
+        padding: 120px 64px;
+    }
+
+    .box-title-gallery {
+        display: flex;
+        align-items: center;
+        width: 1280px;
+        justify-content: space-evenly;
+        gap: 730px;
+
+        .title-gallery {
+            color: #E2E2E2;
+            font-family: "Bebas Neue";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 52px;
+            /* 108.333% */
+            letter-spacing: 0.96px;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            
+        }
+
+        .trace-gallery {
+            width: 64px;
+            height: 4px;
+            background-color: #E9C349;
+        }
+
+        
+        .link-galeria {
+            color: #E9C349;
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            /* 133.333% */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+
+            
+        }
+
+
+
+    }
+
+
 }

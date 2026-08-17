@@ -1,3 +1,12 @@
+:root {
+    --gold: #E9C349;
+    --gold-dark: #3C2F00;
+    --dark-bg: #000000;
+    --dark-secondary: #1A1C1C;
+    --text-light: #E2E2E2;
+    --text-muted: #C4C7C7;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,8 +20,8 @@ header {
     z-index: 10;
     display: flex;
     width: 100%;
-    border-color: #E2E2E2;
-    padding: 16px 64px;
+    border-color: var(--text-light);
+    padding: 1rem 4rem;
     justify-content: space-between;
     align-items: center;
     background: rgba(10, 10, 10, 0.75);
@@ -20,736 +29,815 @@ header {
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     border-bottom: 1px solid rgba(233, 195, 73, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-
-    .boxlogo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: auto;
-
-        .logo {
-            width: 24px;
-            height: 24px;
-        }
-
-        h1 {
-            color: #E2E2E2;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: 3.2px;
-        }
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        gap: 34px;
-    }
-
-    .menu-link {
-        text-decoration: none;
-        color: #E2E2E2;
-        font-family: "Inter", sans-serif;
-        position: relative;
-    }
-
-    .menu-link::after {
-        content: '';
-        height: 3px;
-        width: 0%;
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        background: linear-gradient(90deg, #E9C349, #E2E2E2);
-        transition: width 0.5s ease;
-    }
-
-    .menu-link:hover::after {
-        width: 100%;
-    }
-
-    .primaryCTA {
-        display: flex;
-
-        padding: 12px 20px;
-        align-items: center;
-        gap: 7.99px;
-        background: #E9C349;
-        width: 143px;
-        height: 40px;
-        color: #3C2F00;
-        text-align: center;
-        font-family: "Inter", sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        letter-spacing: 1.2px;
-        cursor: pointer;
-        border: none;
-
-        .arrow {
-            width: 10px;
-            height: 10px;
-            margin-left: 3px;
-        }
-    }
-
-    .primaryCTA:hover {
-        opacity: 0.8;
-    }
 }
 
-main {
+header .boxlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: auto;
+}
 
-    /*Hero Section*/
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        position: relative;
+header .boxlogo .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
-        .image-hero {
-            width: 100%;
-            max-height: 720px;
+header .boxlogo h1 {
+    color: var(--text-light);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0.2rem;
+}
 
+header .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2.125rem;
+}
 
-        }
+header .menu-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    position: relative;
+}
 
-        .title {
-            z-index: 2;
-            position: absolute;
-            top: 175px;
-        }
+header .menu-link::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, var(--gold), var(--text-light));
+    transition: width 0.5s ease;
+}
 
-        h1 {
-            color: #E2E2E2;
-            font-size: 96px;
-            font-weight: 400;
-            line-height: 96px;
-            letter-spacing: -2.4px;
-            text-transform: uppercase;
-            text-align: center;
-        }
+header .menu-link:hover::after {
+    width: 100%;
+}
 
-        p {
-            color: #C4C7C7;
-            text-align: center;
-            font-family: Inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
-            margin-top: 9px;
-        }
+header .primaryCTA {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold);
+    width: 8.9375rem;
+    height: 2.5rem;
+    color: var(--gold-dark);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    cursor: pointer;
+    border: none;
+}
 
-        .buttons {
-            position: absolute;
-            z-index: 3;
-            top: 460px;
-            display: flex;
-            gap: 16px;
-        }
+header .primaryCTA .arrow {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-left: 0.1875rem;
+}
 
-        .buttonone {
-            width: 190px;
-            height: 56px;
-            padding: 20px 35px;
-            color: #3C2F00;
-            text-align: center;
-            font-family: Inter;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 16px;
-            /* 133.333% */
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            background-color: #E9C349;
-            border: none;
-            cursor: pointer;
-        }
+header .primaryCTA:hover {
+    opacity: 0.8;
+}
 
-        .buttontwo {
-            width: 190px;
-            height: 56px;
-            padding: 20px 35px;
-            color: #E9C349;
-            text-align: center;
-            font-family: Inter;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 16px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            background-color: transparent;
-            border: 1px solid #E9C349;
-            cursor: pointer;
-        }
+/*Hero Section*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 45rem;
+    position: relative;
+    padding: 6rem 1.5rem;
+    gap: 1.5rem;
+}
 
-        .buttonthree {
-            position: absolute;
-            z-index: 5;
-            width: 343px;
-            height: 34px;
-            padding: 8px 16px;
-            color: #E2E2E2;
-            text-align: center;
-            font-family: Inter;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 16px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            background-color: #E9C349;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background: rgba(26, 28, 28, 0.50);
-            backdrop-filter: blur(6px);
-            cursor: pointer;
-            top: 550px;
-            justify-content: center;
-            align-items: center;
-        }
+.hero .image-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
 
-        .buttonone:hover {
-            opacity: 0.7;
-        }
+.hero .title {
+    z-index: 2;
+    position: static;
+}
 
-        .buttontwo:hover {
-            opacity: 0.5;
-        }
+.hero h1 {
+    color: var(--text-light);
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: -0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+}
 
-        .buttonthree:hover {
-            opacity: 0.5;
-        }
+.hero p {
+    color: var(--text-muted);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-top: 0.562rem;
+}
 
+.hero .buttons {
+    position: static;
+    z-index: 3;
+    display: flex;
+    gap: 1rem;
+}
+
+.hero .buttonone {
+    width: 11.8rem;
+    height: 3.5rem;
+    padding: 1.25rem 2.18rem;
+    color: var(--gold-dark);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    background-color: var(--gold);
+    border: none;
+    cursor: pointer;
+}
+
+.hero .buttontwo {
+    width: 11.8rem;
+    height: 3.5rem;
+    padding: 1.25rem 2.20rem;
+    color: var(--gold);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+}
+
+.hero .buttonthree {
+    position: static;
+    z-index: 5;
+    width: 21.5rem;
+    max-width: 100%;
+    height: 2.12rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-light);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(26, 28, 28, 0.50);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .buttonone:hover {
+    opacity: 0.7;
+}
+
+.hero .buttontwo:hover {
+    opacity: 0.5;
+}
+
+.hero .buttonthree:hover {
+    opacity: 0.5;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.85) 40%,
+            rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.services {
+    background-color: var(--dark-bg);
+    padding: 6.25rem 4rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.services .box-title {
+    width: 100%;
+    max-width: 72rem;
+    height: 4.5rem;
+    margin-top: 0.625rem;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.services .box-title .title-services {
+    color: var(--text-light);
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.25rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+}
+
+.services .box-title .trace {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--gold);
+    margin-bottom: 0;
+}
+
+.services .box-master {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    color: var(--text-light);
+    padding: 1.375rem;
+}
+
+.services .first-box,
+.services .second-box,
+.services .third-box {
+    width: 23rem;
+    max-width: 100%;
+    height: 18rem;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--dark-secondary);
+}
+
+.services .sub-box {
+    color: var(--text-light);
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.services .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(233, 195, 73, 0.10);
+    border-radius: 50px;
+}
+
+.services .text-box {
+    color: var(--text-muted);
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.services .divprice {
+    padding-top: 1rem;
+}
+
+.services .price {
+    color: var(--gold);
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+}
+
+.services .spanprice {
+    color: var(--text-light);
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0.04rem;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-secondary);
+    width: 100%;
+    padding: 6.875rem 4rem;
+}
+
+.box-about-master {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    max-width: 73rem;
+    background-color: var(--dark-secondary);
+}
+
+.box-about01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 21.375rem;
+    max-width: 100%;
+    height: 15.75rem;
+    background-color: var(--dark-secondary);
+    padding: 1.5rem;
+    gap: 0.25rem;
+}
+
+.box-about01 .icon-about {
+    margin-bottom: 0.625rem;
+}
+
+.box-about01 .sub-about {
+    color: var(--text-light);
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.box-about01 .text-about {
+    color: var(--text-muted);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark-bg);
+    padding: 7.5rem 4rem;
+}
+
+.box-title-gallery {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 80rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.box-title-gallery .title-gallery {
+    color: var(--text-light);
+    font-family: "Bebas Neue";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.25rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.75rem;
+}
+
+.box-title-gallery .trace-gallery {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--gold);
+}
+
+.box-title-gallery .link-galeria {
+    color: var(--gold);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+}
+
+.box-images {
+    display: grid;
+    grid-template-columns: 568px 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 72rem;
+    height: 37.5rem;
+}
+
+.image01,
+.image02,
+.image03,
+.image04 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.image01:hover,
+.image02:hover,
+.image03:hover,
+.image04:hover {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(212, 175, 55, 0.3),
+        0 0 30px rgba(212, 175, 55, 0.15);
+    transform: translateY(-3px) scale(1.01);
+}
+
+.image02 {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.image03 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.image04 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.cta {
+    width: 100%;
+    height: auto;
+    background-color: #414141;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9.375rem 1.5rem;
+    text-align: center;
+}
+
+.box-title-cta {
+    width: 100%;
+    max-width: 36.25rem;
+    color: var(--text-light);
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.box-title-cta h1 {
+    color: var(--text-light);
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.cta p {
+    color: var(--text-muted);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.cta button {
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 17.125rem;
+    max-width: 100%;
+    height: 3.25rem;
+    border: none;
+    background: #25D366;
+    box-shadow: 0 0 20px 0 rgba(37, 211, 102, 0.30);
+    margin-top: 1.5rem;
+    cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+}
+
+.cta button:hover {
+    opacity: 0.8;
+}
+
+.cta h4 {
+    color: var(--gold);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    margin-top: 1rem;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-bg);
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.adress {
+    width: 100%;
+    max-width: 59rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer h3 {
+    color: var(--gold);
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.socials {
+    width: 100%;
+    max-width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.socials p {
+    color: var(--text-muted);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.icons-social {
+    display: flex;
+    gap: 1.25rem;
+}
+
+/* IPAD PRO */
+@media (max-width: 1024px) {
+    header .logo {
+        width: 1.2rem;
+        height: 1.2rem;
     }
 
-    .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top,
-                rgba(0, 0, 0, 1) 0%,
-                rgba(0, 0, 0, 0.85) 40%,
-                rgba(0, 0, 0, 0.8) 100%);
-        z-index: 1;
+    header h1 {
+        font-size: 1.6rem;
     }
 
-    .services {
-        background-color: #000000;
-        padding: 100px 64px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-height: auto;
-        flex-direction: column;
-        gap: 40px;
-
-        .box-title {
-            width: 1152px;
-            height: 72px;
-            margin-top: 10px;
-            background-color: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 14px;
-
-            .title-services {
-                color: #E2E2E2;
-                text-align: center;
-                font-family: "Bebas Neue";
-                font-size: 48px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 52px;
-                /* 108.333% */
-                letter-spacing: 0.96px;
-                text-transform: uppercase;
-            }
-
-            .trace {
-                width: 64px;
-                height: 4px;
-                background-color: #E9C349;
-                margin-bottom: 0;
-            }
-        }
-
-
-        .box-master {
-            display: flex;
-            gap: 24px;
-            color: #E2E2E2;
-            padding: 22px;
-
-
-        }
-
-        .first-box {
-            width: 368px;
-            height: 290px;
-            display: flex;
-            padding: 32px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: #1A1C1C;
-
-
-        }
-
-        .second-box {
-            width: 368px;
-            height: 290px;
-            display: flex;
-            padding: 32px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: #1A1C1C;
-        }
-
-        .third-box {
-            width: 368px;
-            height: 290px;
-            display: flex;
-            padding: 32px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: #1A1C1C;
-
-        }
-
-        .sub-box {
-            color: #E2E2E2;
-            font-family: "Bebas Neue";
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 36px;
-            /* 112.5% */
-            letter-spacing: 0.64px;
-            text-transform: uppercase;
-            padding-top: 16px;
-        }
-
-        .circle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 48px;
-            height: 48px;
-            background: rgba(233, 195, 73, 0.10);
-            border-radius: 50px;
-
-
-
-        }
-
-        .text-box {
-            color: #C4C7C7;
-            font-family: Inter;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            /* 150% */
-        }
-
-        .divprice {
-            padding-top: 16px;
-
-
-        }
-
-        .price {
-            color: #E9C349;
-            font-family: Inter;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 16px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
-
-
-        .spanprice {
-            color: #E2E2E2;
-            font-family: "Bebas Neue";
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 36px;
-            /* 112.5% */
-            letter-spacing: 0.64px;
-        }
-
+    .hero h1 {
+        font-size: 5rem;
     }
 
-    .about {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #1A1C1C;
-        width: 100%;
-        max-height: 497px;
-        padding: 110px 64px;
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    header .menu-link {
+        font-size: 0.8rem;
     }
 
     .box-about-master {
         display: flex;
-        justify-content: center;
-        gap: 64px;
-        align-items: center;
-        width: 1152px;
-        background-color: #1A1C1C;
-
-    }
-
-    .box-about01 {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 342px;
-        height: 252px;
-        background-color: #1A1C1C;
-        padding: 24px;
-        gap: 4px;
-
-        .icon-about {
-            margin-bottom: 10px;
-        }
-
-        .sub-about {
-            color: #E2E2E2;
-            text-align: center;
-            font-family: "Bebas Neue";
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: 0.64px;
-            text-transform: uppercase;
-
-        }
-
-        .text-about {
-            color: #C4C7C7;
-            text-align: center;
-            font-family: Inter;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-
-        }
-
     }
 
-    .gallery {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-height: 960px;
-        background-color: #000000;
-        padding: 120px 64px;
-    }
-
-    .box-title-gallery {
-        display: flex;
-        align-items: center;
-        width: 1280px;
-        justify-content: space-evenly;
-        gap: 700px;
-
-        .title-gallery {
-            color: #E2E2E2;
-            font-family: "Bebas Neue";
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 52px;
-            letter-spacing: 0.96px;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 60px;
-
-        }
-
-        .trace-gallery {
-            width: 64px;
-            height: 4px;
-            background-color: #E9C349;
-        }
-
-
-        .link-galeria {
-            color: #E9C349;
-            text-align: center;
-            font-family: Inter;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 16px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
+    .services .first-box,
+    .services .second-box,
+    .services .third-box {
+        width: 75%;
 
     }
 
     .box-images {
         display: grid;
-        grid-template-columns: 568px 1fr 1fr;
+        grid-template-columns: 1px 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 16px;
-        width: 1152px;
-        height: 600px;
+    }
+
+    .box-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .image01 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .image02 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .image03 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .image04 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
     }
 
     .image01,
     .image02,
     .image03,
     .image04 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        /* ocupa as duas linhas */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        backdrop-filter: blur(5px);
-        border: 1px solid var(--vidro);
-        overflow: hidden;
-        transition: all 0.5s ease;
-        cursor: pointer;
-    }
-
-    .image01:hover,
-    .image02:hover,
-    .image03:hover,
-    .image04:hover {
-        box-shadow:
-            0 20px 40px rgba(0, 0, 0, 0.5),
-            0 8px 16px rgba(0, 0, 0, 0.4),
-            0 0 0 1px rgba(212, 175, 55, 0.3),
-            0 0 30px rgba(212, 175, 55, 0.15);
-        transform: translateY(-3px) scale(1.01);
-    }
-
-    .image02 {
-        grid-column: 2 / 4;
-        /* ocupa as duas colunas da direita */
-        grid-row: 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+}
 
-    .image03 {
-        grid-column: 2;
-        grid-row: 2;
+
+
+
+
+/* IPADs menores */
+@media (max-width: 820px) {
+
+    header .menu-link {
+        font-size: 0.7rem;
+    }
+
+    header .primaryCTA {
+        width: 7rem;
+        height: 2rem;
+        font-size: 0.5rem;
+    }
+
+    .services .first-box,
+    .services .second-box,
+    .services .third-box {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+
     }
 
-    .image04 {
-        grid-column: 3;
-        grid-row: 2;
+    .box-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        max-width: 72rem;
+        height: 37.5rem;
     }
 
+    @media (max-width:760px) {
 
+        header {
+            padding: 1rem 2rem;
+        }
 
-    .cta {
-        width: 100%;
-        height: auto;
-        background-color: #414141;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 150px 351px 316px 351px;
-    }
+        header .boxlogo .logo {
+            width: 1rem;
+            height: 1rem;
+        }
 
-    .box-title-cta {
+        header .boxlogo h1 {
 
-        width: 580px;
-        height: 288px;
-        color: #E2E2E2;
-        text-align: center;
-        font-family: "Bebas Neue";
-        font-size: 96px;
-        font-style: normal;
-        font-weight: 400px;
-        line-height: 96px;
-        letter-spacing: 4.8px;
-        text-transform: uppercase;
-    }
+            font-size: 1.5rem;
+            line-height: normal;
 
-    .box-title-cta h1 {
+        }
 
+        header .menu-link {
+            display: none;
+        }
 
-        color: #E2E2E2;
-        text-align: center;
-        font-family: "Bebas Neue";
-        font-size: 96px;
-        font-style: normal;
-        font-weight: 400px;
-        line-height: 96px;
-        letter-spacing: 4.8px;
-        text-transform: uppercase;
-    }
-
-    .cta p {
-        color: #C4C7C7;
-        text-align: center;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        margin-top: 20px;
-    }
-
-    .cta button {
-        display: flex;
-        padding: 16px 32px;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        width: 274px;
-        height: 52px;
-        border: none;
-        background: #25D366;
-        box-shadow: 0 0 20px 0 rgba(37, 211, 102, 0.30);
-        margin-top: 40px;
-        cursor: pointer;
-
-        color: #FFF;
-        text-align: center;
-        font-family: Inter;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16px;
-        /* 133.333% */
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-    }
-
-    .cta button:hover {
-        opacity: 0.8;
-    }
-
-    .cta h4 {
-        color: #E9C349;
-        text-align: center;
-        font-family: Inter;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        /* 133.333% */
-        letter-spacing: 1.2px;
-        margin-top: 16px;
-    }
-
-
-    .footer {
-        width: 100%;
-        height: 200px;
-        background-color: #000000;
-        padding: 64px;
-        display: flex;
-        gap: 350px;
-
-    }
-
-    .adress {
-        width: 950px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .footer h3 {
-        color: #E9C349;
-        font-family: "Bebas Neue";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 36px;
-        /* 112.5% */
-        letter-spacing: 0.64px;
-        text-transform: uppercase;
-    }
-
-    .footer p {
-        color: #C4C7C7;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-
-    }
-
-    .socials {
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        .hero h1 {
+            font-size: 3.5rem; 
+            line-height: 4rem;
+              
+        }
 
 
     }
-
-    .socials p {
-        color: #C4C7C7;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-        margin-top: 20px;
-    }
-
-    .icons-social {
-        display: flex;
-        gap: 20px;
-    }
-
-
-
 
 
 }

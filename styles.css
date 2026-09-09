@@ -102,6 +102,8 @@ header .primaryCTA {
     letter-spacing: 0.075rem;
     cursor: pointer;
     border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 header .primaryCTA .arrow {
@@ -112,6 +114,11 @@ header .primaryCTA .arrow {
 
 header .primaryCTA:hover {
     opacity: 0.8;
+    transform: translateY(-1px) scale(1.03);
+}
+
+header .primaryCTA:active {
+    opacity: 0.5;
 }
 
 /* Hero Section */
@@ -323,6 +330,20 @@ header .primaryCTA:hover {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     background: var(--dark-secondary);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.services .first-box:hover,
+.services .second-box:hover,
+.services .third-box:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(212, 175, 55, 0.3),
+        0 0 30px rgba(212, 175, 55, 0.15);
 }
 
 .services .sub-box {
@@ -640,10 +661,17 @@ header .primaryCTA:hover {
     line-height: 1rem;
     letter-spacing: 0.075rem;
     text-transform: uppercase;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .cta button:hover {
     opacity: 0.8;
+    transform: translateY(-3px) scale(1.01);
+}
+
+.cta button:active {
+    opacity: 0.5;
 }
 
 .cta h4 {
@@ -891,16 +919,18 @@ header .primaryCTA:hover {
     .title {
         margin-top: 40px;
     }
+
     .hero {
         min-height: 30rem;
     }
+
     .hero h1 {
         font-size: 3.5rem;
         line-height: 3.8rem;
-
     }
 
-    .hero .buttonone, .hero .buttontwo  {
+    .hero .buttonone,
+    .hero .buttontwo {
         width: 8.5rem;
         height: 3rem;
         padding: 1rem 1rem;
@@ -912,14 +942,67 @@ header .primaryCTA:hover {
     }
 
     .services {
-    padding: 4.5rem 3rem;
-    
-}
+        padding: 4.5rem 3rem;
+        gap: 1rem;
 
-.services .box-title {
-    margin-top: 0.625rem;
-}
+    }
 
-    
+    .services .box-title {
+        margin-top: 0.625rem;
+    }
+
+    .services .box-title .title-services {
+        font-size: 2.3rem;
+    }
+
+    .services .first-box,
+    .services .second-box,
+    .services .third-box {
+        justify-content: center;
+        padding: 1.8rem;
+
+    }
+
+    .about {
+        padding: 5.3rem 3.5rem;
+    }
+
+    .box-about-master {
+        gap: 3.5rem;
+    }
+
+    .gallery {
+        padding: 7rem 2rem;
+    }
+
+    .box-title-gallery {
+        justify-content: center;
+    }
+
+    .box-title-gallery .title-gallery {
+        font-size: 2.3rem;
+    }
+
+    .box-title-gallery .link-galeria {
+        font-size: 0.55rem;
+        line-height: 0.5rem;
+        letter-spacing: 0.055rem;
+
+    }
+
+    .box-title-cta h1 {
+        line-height: 4rem;
+        font-size: 3.5rem;
+        letter-spacing: normal;
+    }
+
+    .cta p {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .cta h4 {
+        font-size: 0.60rem;
+    }
 
 }

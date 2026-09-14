@@ -1000,6 +1000,12 @@ header .primaryCTA:active {
 
     }
 
+    .hero .image-hero{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    
     .services {
 
         padding: 3.5rem 1.8rem;

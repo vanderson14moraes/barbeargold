@@ -84,6 +84,10 @@ header .menu-link:hover::after {
     width: 100%;
 }
 
+header .menu-hamburguer {
+    display: none;
+}
+
 header .primaryCTA {
     display: flex;
     padding: 0.75rem 1.25rem;
@@ -913,13 +917,35 @@ header .primaryCTA:active {
         line-height: normal;
     }
 
-    header .menu-link {
-        display: none;
-    }
+    header .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 150px;
+    padding: 0.7rem;
+    background: rgba(10, 10, 10, 0.98);
+    border: 1px solid rgba(233, 195, 73, 0.2);
+    border-radius: 6px;
+}
+
+
 
     header .menu.ativo {
         display: flex;
     }
+
+    header .menu-link {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 1px;
+    
+}
 
     header .primaryCTA {
         display: none;
@@ -934,7 +960,7 @@ header .primaryCTA:active {
         align-items: center;
     }
 
-     header .menu-hamburguer span {
+    header .menu-hamburguer span {
         width: 35px;
         height: 3px;
         background: white;
@@ -969,13 +995,13 @@ header .primaryCTA:active {
     }
 
     .hero::before {
-        
+
         padding: 6rem 2rem;
 
     }
 
     .services {
-        
+
         padding: 3.5rem 1.8rem;
         gap: 1rem;
 
@@ -1043,8 +1069,8 @@ header .primaryCTA:active {
         font-size: 0.60rem;
     }
 
-    .cta button{
+    .cta button {
         font-size: 0.68rem;
-        
+
     }
 }

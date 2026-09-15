@@ -203,6 +203,7 @@ header .primaryCTA:active {
     background-color: var(--gold);
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .hero .buttontwo {
@@ -221,6 +222,7 @@ header .primaryCTA:active {
     background-color: transparent;
     border: 1px solid var(--gold);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .hero .buttonthree {
@@ -946,7 +948,7 @@ header .primaryCTA:active {
 
     header .menu-link {
         display: block;
-        width: 10%;
+        width: 100%;
         padding: 0.7rem 0.8rem;
         font-size: 0.8rem;
         text-align: center;
